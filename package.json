@@ -1,0 +1,14 @@
+{
+  "name": "local-web-fix",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static service website for Local Web Fix",
+  "scripts": {
+    "check:js": "node --check theme.js",
+    "check:site": "node tools/check-site.js",
+    "test": "npm run check:js && npm run check:site"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

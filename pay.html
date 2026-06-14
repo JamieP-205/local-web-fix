@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Links | Local Web Fix</title>
+  <meta name="description" content="Payment links for Local Web Fix clients after scope has been agreed.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var key = 'local-web-fix-theme';
+        var saved = localStorage.getItem(key);
+        var system = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', saved || system);
+      } catch (error) {}
+    }());
+  </script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Local Web Fix home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" focusable="false"><rect x="5.5" y="5.5" width="29" height="29" rx="8"></rect><path d="M12.5 20.5l5.4 5.4L28 15.8"></path><path class="mark-line" d="M13 12.5h12"></path></svg></span><span class="brand-text">Local Web Fix</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/scope.html">Scope</a><a href="/privacy.html">Privacy</a></nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" aria-pressed="false"><span data-theme-label>Dark</span></button>
+  </div>
+</header>
+<main id="main" class="page-main">
+  <div class="container page-shell prose">
+    <a class="back-link" href="/">← Back to homepage</a>
+    <h1>Payment page</h1>
+    <div class="payment-warning">
+      <p><strong>Only use this page after Jamie has confirmed your scope.</strong> Please do not pay for a package until we have agreed what is included, what access is needed, and what is outside the job. If you are not sure, use the quick review form first. If you paid by mistake, email <a href="mailto:hello@localwebfix.co.uk">hello@localwebfix.co.uk</a> as soon as possible.</p>
+      <p>Paid work includes before/after screenshots and a short handover note, so you can see what changed and what to check next.</p>
+    </div>
+
+    <div class="pay-grid">
+      <article class="content-card">
+        <p class="price-label">£50</p>
+        <h2>Starter Fix</h2>
+        <p>For one obvious agreed issue after scope confirmation. Typical examples: a broken link, unclear contact route, hard-to-find menu/service list or opening-hours tidy-up.</p>
+        <a class="btn btn-primary" href="https://buy.stripe.com/14A6oHaTF2w54uR3fLgIo00" rel="noopener">Pay £50</a>
+      </article>
+      <article class="content-card">
+        <p class="price-label">£100</p>
+        <h2>Local Fix-Up</h2>
+        <p>For the main fixed-scope tidy-up after scope confirmation across mobile clarity, contact flow, key information and Google profile basics.</p>
+        <a class="btn btn-primary" href="https://buy.stripe.com/7sY3cv9PB7Qp9Pb6rXgIo01" rel="noopener">Pay £100</a>
+      </article>
+      <article class="content-card">
+        <p class="price-label">£150</p>
+        <h2>Full Fix-Up Plus</h2>
+        <p>For the wider fix-up and follow-up check after scope confirmation where the page or contact flow needs more attention.</p>
+        <a class="btn btn-primary" href="https://buy.stripe.com/9B63cv8Lx6Mld1n8A5gIo02" rel="noopener">Pay £150</a>
+      </article>
+    </div>
+  </div>
+</main>
+<script src="/theme.js" defer></script>
+</body>
+</html>

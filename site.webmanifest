@@ -1,0 +1,14 @@
+{
+  "name": "Local Web Fix",
+  "short_name": "Local Web Fix",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#215c54",
+  "background_color": "#f8f7f3",
+  "display": "minimal-ui"
+}
