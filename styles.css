@@ -64,3 +64,219 @@
 .secondary-page .page-summary-card,.secondary-page .confirm-card{border-color:color-mix(in srgb,var(--accent) 25%,var(--border));}
 @media (min-width:760px){.strip-grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:560px){.strip-grid div{padding:.78rem .85rem}.secondary-page .page-hero h1{font-size:clamp(2rem,11vw,3rem);max-width:12ch}.confirm-card{margin-top:.2rem}}
+/* Homepage layout refinements */
+:root {
+  --bg: #fbfaf6;
+  --surface: #fffdf8;
+  --surface-strong: #f2efe6;
+  --accent: #24564c;
+  --accent-hover: #183d36;
+  --accent-soft: #edf4f0;
+  --shadow: none;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --container: 1080px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #101412;
+  --surface: #151b18;
+  --surface-strong: #1b2420;
+  --border: #33413b;
+  --accent: #9dcdc2;
+  --accent-hover: #c2e8df;
+  --accent-soft: #1b2a25;
+  --shadow: none;
+}
+
+body {
+  background: var(--bg);
+}
+
+.site-header {
+  background: var(--bg);
+  backdrop-filter: none;
+}
+
+.site-nav a,
+.theme-toggle,
+.field input,
+.field select,
+.field textarea,
+details,
+.note-box,
+.contact-form,
+.price-card,
+.example-note,
+.portrait-card {
+  border-radius: var(--radius-sm);
+}
+
+.site-nav a:hover {
+  background: transparent;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(90deg, var(--bg) 0 68%, var(--surface-strong) 68% 100%);
+}
+
+.hero-grid {
+  gap: clamp(1.5rem, 5vw, 3rem);
+}
+
+.hero-card {
+  background: transparent;
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  box-shadow: none;
+  padding: .25rem 0 .25rem 1.25rem;
+}
+
+.trust-row span,
+.pill-grid span {
+  border-radius: var(--radius-sm);
+  background: transparent;
+}
+
+.hero-card .pill-grid span {
+  background: var(--surface);
+}
+
+.mini-card,
+.step-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  padding: 1rem 0 0;
+}
+
+.three-grid,
+.step-grid {
+  gap: clamp(1.2rem, 4vw, 2.2rem);
+}
+
+.split-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  padding: clamp(1.2rem, 3vw, 1.7rem) 0 0;
+}
+
+.section-muted .split-card {
+  border-color: color-mix(in srgb, var(--accent) 24%, var(--border));
+}
+
+.example-note {
+  box-shadow: none;
+}
+
+.price-card {
+  box-shadow: none;
+}
+
+.featured-card {
+  border-width: 2px;
+  box-shadow: none;
+}
+
+.free-card {
+  background: transparent;
+}
+
+.badge {
+  border-radius: var(--radius-sm);
+}
+
+.note-box {
+  background: transparent;
+}
+
+.step-card span {
+  border-radius: var(--radius-sm);
+}
+
+.access-card {
+  border-top-color: var(--accent);
+}
+
+.about-grid {
+  border-top: 1px solid var(--border);
+  padding-top: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+.portrait-card {
+  box-shadow: none;
+}
+
+.form-section {
+  background: var(--surface-strong);
+}
+
+.optional-fields {
+  background: transparent;
+  border-radius: var(--radius-sm);
+}
+
+.site-footer {
+  background: var(--bg);
+}
+
+@media (min-width: 720px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  }
+
+  .section-head:not(.centred) {
+    grid-template-columns: minmax(190px, .36fr) minmax(0, 1fr);
+    align-items: end;
+  }
+
+  .section-head:not(.centred) .eyebrow {
+    grid-column: 1 / -1;
+  }
+
+  .section-head:not(.centred) h2 {
+    max-width: 10ch;
+  }
+
+  .section-head:not(.centred) p {
+    max-width: 58ch;
+  }
+
+  .pricing-grid {
+    gap: .75rem;
+  }
+
+  .step-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    background: var(--bg);
+  }
+
+  .hero-card {
+    border-left: 0;
+    border-top: 3px solid var(--accent);
+    padding: 1rem 0 0;
+  }
+
+  .mini-card,
+  .step-card,
+  .split-card {
+    padding-top: .9rem;
+  }
+
+  .trust-row span,
+  .pill-grid span {
+    padding: .42rem .55rem;
+  }
+}
