@@ -18,7 +18,7 @@ Local Web Fix is a focused service website offering practical website and onli
 
 | Service website preview |
 | --- |
-| ![Local Web Fix prevlocal-web-fix-preview.png
+| ![Local Web Fix preview](local-web-fix-preview.png) |
 
 ## Why I built it
 
