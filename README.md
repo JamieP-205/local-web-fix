@@ -1,4 +1,4 @@
-﻿# Local Web Fix
+# Local Web Fix
 
 [![CI](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml/badge.svg)](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml)
 
