@@ -1,4 +1,4 @@
-# Local Web Fix — proposal template
+# Local Web Fix  -  proposal template
 
 Subject: Local Web Fix scope for [Business Name]
 
