@@ -1,71 +1,93 @@
-﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Local Web Fix website preview</title>
-  <desc id="desc">Preview mockup of the Local Web Fix service website for small business web improvements.</desc>
-
+  <desc id="desc">Preview of the Local Web Fix homepage layout, matching the live service website style.</desc>
   <defs>
     <style>
-      .bg { fill: #f8fafc; }
-      .browser { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 22; }
-      .topbar { fill: #e2e8f0; }
-      .dot1 { fill: #ef4444; }
-      .dot2 { fill: #f59e0b; }
-      .dot3 { fill: #22c55e; }
-      .brand { font: 800 42px Segoe UI, Arial, sans-serif; fill: #0f172a; }
-      .headline { font: 800 44px Segoe UI, Arial, sans-serif; fill: #0f172a; }
-      .body { font: 20px Segoe UI, Arial, sans-serif; fill: #475569; }
-      .nav { font: 16px Segoe UI, Arial, sans-serif; fill: #475569; }
-      .button { fill: #2563eb; rx: 14; }
-      .buttonText { font: 700 18px Segoe UI, Arial, sans-serif; fill: #ffffff; }
-      .ghost { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
-      .ghostText { font: 700 18px Segoe UI, Arial, sans-serif; fill: #0f172a; }
-      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; rx: 18; }
-      .cardTitle { font: 700 20px Segoe UI, Arial, sans-serif; fill: #0f172a; }
-      .cardText { font: 16px Segoe UI, Arial, sans-serif; fill: #64748b; }
-      .pill { fill: #ecfdf5; stroke: #86efac; stroke-width: 1; rx: 12; }
-      .pillText { font: 700 14px Segoe UI, Arial, sans-serif; fill: #166534; }
+      .page { fill: #faf8f2; }
+      .navline { stroke: #ded8cc; stroke-width: 1.5; }
+      .brand { font: 800 20px Segoe UI, Arial, sans-serif; fill: #18181b; }
+      .nav { font: 800 15px Segoe UI, Arial, sans-serif; fill: #57534e; }
+      .kicker { font: 800 14px Segoe UI, Arial, sans-serif; letter-spacing: 3px; fill: #0f766e; }
+      .headline { font: 900 64px Segoe UI, Arial, sans-serif; fill: #18181b; }
+      .body { font: 20px Segoe UI, Arial, sans-serif; fill: #57534e; }
+      .pill { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 16; }
+      .pillText { font: 800 15px Segoe UI, Arial, sans-serif; fill: #18181b; }
+      .primary { fill: #1f7668; rx: 18; }
+      .primaryText { font: 700 17px Segoe UI, Arial, sans-serif; fill: #ffffff; }
+      .secondary { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 18; }
+      .secondaryText { font: 700 17px Segoe UI, Arial, sans-serif; fill: #18181b; }
+      .card { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 22; }
+      .cardTitle { font: 800 22px Segoe UI, Arial, sans-serif; fill: #18181b; }
+      .cardText { font: 18px Segoe UI, Arial, sans-serif; fill: #57534e; }
+      .logoBox { fill: none; stroke: #1f7668; stroke-width: 3; rx: 7; }
+      .tick { stroke: #1f7668; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .toggle { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 20; }
     </style>
   </defs>
 
-  <rect class="bg" width="1200" height="760"/>
-  <rect class="browser" x="70" y="55" width="1060" height="650"/>
-  <rect class="topbar" x="70" y="55" width="1060" height="58" rx="22"/>
-  <circle class="dot1" cx="105" cy="84" r="8"/>
-  <circle class="dot2" cx="132" cy="84" r="8"/>
-  <circle class="dot3" cx="159" cy="84" r="8"/>
+  <rect class="page" width="1200" height="760"/>
 
-  <text class="brand" x="120" y="170">Local Web Fix</text>
-  <text class="nav" x="790" y="166">Services</text>
-  <text class="nav" x="875" y="166">Pricing</text>
-  <text class="nav" x="950" y="166">Privacy</text>
-  <text class="nav" x="1025" y="166">Contact</text>
+  <line class="navline" x1="0" y1="76" x2="1200" y2="76"/>
+  <rect class="logoBox" x="130" y="24" width="30" height="30"/>
+  <path class="tick" d="M138 39 L145 46 L155 32"/>
+  <text class="brand" x="175" y="45">Local Web Fix</text>
 
-  <rect class="pill" x="120" y="215" width="230" height="34"/>
-  <text class="pillText" x="235" y="237" text-anchor="middle">Student-built local service</text>
+  <text class="nav" x="520" y="44">What I fix</text>
+  <text class="nav" x="618" y="44">Example</text>
+  <text class="nav" x="700" y="44">Prices</text>
+  <text class="nav" x="770" y="44">Process</text>
+  <text class="nav" x="850" y="44">Access</text>
+  <text class="nav" x="928" y="44">Free check</text>
 
-  <text class="headline" x="120" y="310">Practical website fixes</text>
-  <text class="headline" x="120" y="362">for small businesses</text>
+  <rect class="toggle" x="1030" y="17" width="74" height="42"/>
+  <text class="pillText" x="1067" y="44" text-anchor="middle">Dark</text>
 
-  <text class="body" x="120" y="414">Focused audits, clearer information, mobile improvements</text>
-  <text class="body" x="120" y="444">and simple handovers without overselling a full rebuild.</text>
+  <text class="kicker" x="130" y="175">SMALL ONLINE TIDY-UPS FOR UK LOCAL BUSINESSES</text>
 
-  <rect class="button" x="120" y="490" width="190" height="54"/>
-  <text class="buttonText" x="215" y="524" text-anchor="middle">Request a check</text>
+  <text class="headline" x="130" y="250">Make the</text>
+  <text class="headline" x="130" y="323">important stuff</text>
+  <text class="headline" x="130" y="396">easier to find.</text>
 
-  <rect class="ghost" x="330" y="490" width="170" height="54"/>
-  <text class="ghostText" x="415" y="524" text-anchor="middle">View scope</text>
+  <text class="body" x="130" y="455">I check your website, Google listing or social pages for the basics customers</text>
+  <text class="body" x="130" y="487">rely on: hours, menus, services, prices, phone buttons, booking links and</text>
+  <text class="body" x="130" y="519">mobile layout.</text>
 
-  <rect class="card" x="650" y="240" width="360" height="82"/>
-  <text class="cardTitle" x="690" y="274">Fix missing basics</text>
-  <text class="cardText" x="690" y="302">Opening hours, contact details, menus and service info.</text>
+  <rect class="pill" x="130" y="560" width="170" height="38"/>
+  <text class="pillText" x="215" y="584" text-anchor="middle">Free public check first</text>
 
-  <rect class="card" x="650" y="350" width="360" height="82"/>
-  <text class="cardTitle" x="690" y="384">Improve mobile clarity</text>
-  <text class="cardText" x="690" y="412">Make key information easier to find on phones.</text>
+  <rect class="pill" x="313" y="560" width="140" height="38"/>
+  <text class="pillText" x="383" y="584" text-anchor="middle">No login needed</text>
 
-  <rect class="card" x="650" y="460" width="360" height="82"/>
-  <text class="cardTitle" x="690" y="494">Honest process</text>
-  <text class="cardText" x="690" y="522">Clear scope, no fake ranking promises, safe handover.</text>
+  <rect class="pill" x="468" y="560" width="205" height="38"/>
+  <text class="pillText" x="570" y="584" text-anchor="middle">No sales or ranking promises</text>
 
-  <rect class="card" x="120" y="610" width="890" height="52"/>
-  <text class="cardText" x="565" y="642" text-anchor="middle">Built with semantic HTML, CSS, Netlify Forms and a small theme controller.</text>
+  <rect class="primary" x="130" y="625" width="145" height="50"/>
+  <text class="primaryText" x="202" y="656" text-anchor="middle">Start free check</text>
+
+  <rect class="secondary" x="295" y="625" width="110" height="50"/>
+  <text class="secondaryText" x="350" y="656" text-anchor="middle">See prices</text>
+
+  <text class="body" x="130" y="717">Run by Jamie Parr, a Computing Technologies student based in Belfast.</text>
+
+  <rect class="card" x="745" y="175" width="340" height="250"/>
+  <text class="cardTitle" x="770" y="218">Quick check looks at</text>
+
+  <rect class="pill" x="770" y="245" width="125" height="36"/>
+  <text class="pillText" x="832" y="268" text-anchor="middle">Menus / services</text>
+
+  <rect class="pill" x="910" y="245" width="120" height="36"/>
+  <text class="pillText" x="970" y="268" text-anchor="middle">Opening hours</text>
+
+  <rect class="pill" x="770" y="295" width="160" height="36"/>
+  <text class="pillText" x="850" y="318" text-anchor="middle">Booking / order links</text>
+
+  <rect class="pill" x="945" y="295" width="115" height="36"/>
+  <text class="pillText" x="1002" y="318" text-anchor="middle">Google details</text>
+
+  <rect class="pill" x="770" y="345" width="115" height="36"/>
+  <text class="pillText" x="827" y="368" text-anchor="middle">Mobile clarity</text>
+
+  <line class="navline" x1="770" y1="397" x2="1060" y2="397"/>
+  <text class="cardText" x="770" y="433">Best fit: cafes, takeaways, salons, barbers, trades,</text>
+  <text class="cardText" x="770" y="462">shops, tutors, cleaners and simple local services.</text>
 </svg>
