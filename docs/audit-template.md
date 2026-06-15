@@ -1,4 +1,4 @@
-# Local Web Fix — 10-point audit template
+# Local Web Fix  -  10-point audit template
 
 Business name:
 Website:
@@ -40,7 +40,7 @@ Checked by: Jamie Parr
 ## 7. Photos and trust
 - What to check: Are photos current and useful?
 - Bad sign: no photos, poor quality, old branding.
-- Simple fix: recommend 3–5 current photos or reorder visible assets.
+- Simple fix: recommend 3 - 5 current photos or reorder visible assets.
 
 ## 8. Reviews/review path
 - What to check: Can customers see reviews or leave one easily?
