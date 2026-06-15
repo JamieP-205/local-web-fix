@@ -1,0 +1,71 @@
+﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Local Web Fix website preview</title>
+  <desc id="desc">Preview mockup of the Local Web Fix service website for small business web improvements.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .browser { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 22; }
+      .topbar { fill: #e2e8f0; }
+      .dot1 { fill: #ef4444; }
+      .dot2 { fill: #f59e0b; }
+      .dot3 { fill: #22c55e; }
+      .brand { font: 800 42px Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .headline { font: 800 44px Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .body { font: 20px Segoe UI, Arial, sans-serif; fill: #475569; }
+      .nav { font: 16px Segoe UI, Arial, sans-serif; fill: #475569; }
+      .button { fill: #2563eb; rx: 14; }
+      .buttonText { font: 700 18px Segoe UI, Arial, sans-serif; fill: #ffffff; }
+      .ghost { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+      .ghostText { font: 700 18px Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; rx: 18; }
+      .cardTitle { font: 700 20px Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .cardText { font: 16px Segoe UI, Arial, sans-serif; fill: #64748b; }
+      .pill { fill: #ecfdf5; stroke: #86efac; stroke-width: 1; rx: 12; }
+      .pillText { font: 700 14px Segoe UI, Arial, sans-serif; fill: #166534; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="browser" x="70" y="55" width="1060" height="650"/>
+  <rect class="topbar" x="70" y="55" width="1060" height="58" rx="22"/>
+  <circle class="dot1" cx="105" cy="84" r="8"/>
+  <circle class="dot2" cx="132" cy="84" r="8"/>
+  <circle class="dot3" cx="159" cy="84" r="8"/>
+
+  <text class="brand" x="120" y="170">Local Web Fix</text>
+  <text class="nav" x="790" y="166">Services</text>
+  <text class="nav" x="875" y="166">Pricing</text>
+  <text class="nav" x="950" y="166">Privacy</text>
+  <text class="nav" x="1025" y="166">Contact</text>
+
+  <rect class="pill" x="120" y="215" width="230" height="34"/>
+  <text class="pillText" x="235" y="237" text-anchor="middle">Student-built local service</text>
+
+  <text class="headline" x="120" y="310">Practical website fixes</text>
+  <text class="headline" x="120" y="362">for small businesses</text>
+
+  <text class="body" x="120" y="414">Focused audits, clearer information, mobile improvements</text>
+  <text class="body" x="120" y="444">and simple handovers without overselling a full rebuild.</text>
+
+  <rect class="button" x="120" y="490" width="190" height="54"/>
+  <text class="buttonText" x="215" y="524" text-anchor="middle">Request a check</text>
+
+  <rect class="ghost" x="330" y="490" width="170" height="54"/>
+  <text class="ghostText" x="415" y="524" text-anchor="middle">View scope</text>
+
+  <rect class="card" x="650" y="240" width="360" height="82"/>
+  <text class="cardTitle" x="690" y="274">Fix missing basics</text>
+  <text class="cardText" x="690" y="302">Opening hours, contact details, menus and service info.</text>
+
+  <rect class="card" x="650" y="350" width="360" height="82"/>
+  <text class="cardTitle" x="690" y="384">Improve mobile clarity</text>
+  <text class="cardText" x="690" y="412">Make key information easier to find on phones.</text>
+
+  <rect class="card" x="650" y="460" width="360" height="82"/>
+  <text class="cardTitle" x="690" y="494">Honest process</text>
+  <text class="cardText" x="690" y="522">Clear scope, no fake ranking promises, safe handover.</text>
+
+  <rect class="card" x="120" y="610" width="890" height="52"/>
+  <text class="cardText" x="565" y="642" text-anchor="middle">Built with semantic HTML, CSS, Netlify Forms and a small theme controller.</text>
+</svg>
