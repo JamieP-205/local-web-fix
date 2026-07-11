@@ -186,8 +186,6 @@ ul {
 
 .section-muted {
   background: var(--bg-alt);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 .section-head {
@@ -387,7 +385,7 @@ ul {
 /* 6. Hero */
 
 .hero {
-  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
 }
 
 .hero-grid {
@@ -481,9 +479,8 @@ ul {
 }
 
 .card-note {
-  border-top: 1px solid var(--line);
-  padding-top: 0.9rem;
-  margin-top: 0.9rem;
+  padding-top: 0.4rem;
+  margin-top: 0.4rem;
 }
 
 @media (min-width: 760px) {
@@ -510,7 +507,6 @@ ul {
 .content-card {
   background: var(--bg);
   border: 1px solid var(--line);
-  border-top: 4px solid var(--line-strong);
   padding: 1.1rem;
 }
 
@@ -591,7 +587,7 @@ ul {
 }
 
 .accent-card {
-  border-top-color: var(--green);
+  border-color: var(--green);
 }
 
 .soft-card {
@@ -599,7 +595,7 @@ ul {
 }
 
 .access-card {
-  border-top-color: var(--green);
+  border-color: var(--green);
 }
 
 @media (min-width: 720px) {
@@ -636,7 +632,6 @@ ul {
   align-content: start;
   background: var(--bg);
   border: 1px solid var(--line);
-  border-top: 4px solid var(--line-strong);
   padding: 1.2rem;
 }
 
@@ -661,14 +656,11 @@ ul {
 
 .featured-card {
   border-color: var(--green);
-  border-top-color: var(--green);
   border-width: 2px;
-  border-top-width: 4px;
 }
 
 .free-card {
   background: var(--green-tint);
-  border-top-color: var(--green);
 }
 
 .badge {
@@ -759,13 +751,13 @@ ul {
 
 .faq-list {
   display: grid;
-  gap: 0;
-  border-top: 1px solid var(--line);
+  gap: 0.6rem;
 }
 
 details {
-  border-bottom: 1px solid var(--line);
-  padding: 0.9rem 0;
+  border: 1px solid var(--line);
+  padding: 0.85rem 1rem;
+  background: var(--bg);
 }
 
 summary {
@@ -792,7 +784,6 @@ details p {
 
 .form-section {
   background: var(--bg-alt);
-  border-top: 1px solid var(--line);
 }
 
 .form-layout {
@@ -871,7 +862,6 @@ details p {
 
 .page-hero {
   padding: clamp(2.4rem, 6vw, 4.4rem) 0 1.8rem;
-  border-bottom: 1px solid var(--line);
 }
 
 .compact-page-hero {
@@ -983,7 +973,6 @@ details p {
 .compact-info-strip {
   padding: 1rem 0;
   background: var(--bg-alt);
-  border-bottom: 1px solid var(--line);
 }
 
 .strip-grid {
@@ -992,8 +981,7 @@ details p {
 }
 
 .strip-grid div {
-  border-left: 4px solid var(--line-strong);
-  padding: 0.2rem 0 0.2rem 0.85rem;
+  padding: 0.2rem 0;
 }
 
 .strip-grid strong {
@@ -1078,7 +1066,7 @@ details p {
 
 .site-footer {
   padding: 1.6rem 0 2rem;
-  border-top: 2px solid var(--line-strong);
+  border-top: 1px solid var(--line);
   background: var(--bg);
   color: var(--muted);
   font-size: 0.95rem;
