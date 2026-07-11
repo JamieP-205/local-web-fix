@@ -3,91 +3,100 @@
   <desc id="desc">Preview of the Local Web Fix homepage layout, matching the live service website style.</desc>
   <defs>
     <style>
-      .page { fill: #faf8f2; }
-      .navline { stroke: #ded8cc; stroke-width: 1.5; }
-      .brand { font: 800 20px Segoe UI, Arial, sans-serif; fill: #18181b; }
-      .nav { font: 800 15px Segoe UI, Arial, sans-serif; fill: #57534e; }
-      .kicker { font: 800 14px Segoe UI, Arial, sans-serif; letter-spacing: 3px; fill: #0f766e; }
-      .headline { font: 900 64px Segoe UI, Arial, sans-serif; fill: #18181b; }
-      .body { font: 20px Segoe UI, Arial, sans-serif; fill: #57534e; }
-      .pill { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 16; }
-      .pillText { font: 800 15px Segoe UI, Arial, sans-serif; fill: #18181b; }
-      .primary { fill: #1f7668; rx: 18; }
+      .page { fill: #ffffff; }
+      .headerline { stroke: #0b0c0c; stroke-width: 2; }
+      .rule { stroke: #b1b4b6; stroke-width: 1; }
+      .brand { font: 700 20px Segoe UI, Arial, sans-serif; fill: #0b0c0c; }
+      .nav { font: 600 15px Segoe UI, Arial, sans-serif; fill: #0b0c0c; }
+      .kicker { font: 700 15px Segoe UI, Arial, sans-serif; fill: #4e5551; }
+      .headline { font: 700 62px Segoe UI, Arial, sans-serif; fill: #0b0c0c; letter-spacing: -1px; }
+      .body { font: 20px Segoe UI, Arial, sans-serif; fill: #4e5551; }
+      .tickText { font: 600 16px Segoe UI, Arial, sans-serif; fill: #0b0c0c; }
+      .primary { fill: #00593b; }
+      .primaryEdge { fill: #002d1e; }
       .primaryText { font: 700 17px Segoe UI, Arial, sans-serif; fill: #ffffff; }
-      .secondary { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 18; }
-      .secondaryText { font: 700 17px Segoe UI, Arial, sans-serif; fill: #18181b; }
-      .card { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 22; }
-      .cardTitle { font: 800 22px Segoe UI, Arial, sans-serif; fill: #18181b; }
-      .cardText { font: 18px Segoe UI, Arial, sans-serif; fill: #57534e; }
-      .logoBox { fill: none; stroke: #1f7668; stroke-width: 3; rx: 7; }
-      .tick { stroke: #1f7668; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .toggle { fill: #fffdf7; stroke: #d8d0c2; stroke-width: 1.5; rx: 20; }
+      .secondary { fill: #ffffff; stroke: #0b0c0c; stroke-width: 2; }
+      .secondaryText { font: 700 17px Segoe UI, Arial, sans-serif; fill: #0b0c0c; }
+      .card { fill: #ffffff; stroke: #b1b4b6; stroke-width: 1; }
+      .cardTop { fill: #0b0c0c; }
+      .cardTitle { font: 700 20px Segoe UI, Arial, sans-serif; fill: #0b0c0c; }
+      .cardText { font: 17px Segoe UI, Arial, sans-serif; fill: #4e5551; }
+      .logoBox { fill: none; stroke: #00593b; stroke-width: 3; }
+      .tick { stroke: #00593b; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
     </style>
   </defs>
 
   <rect class="page" width="1200" height="760"/>
 
-  <line class="navline" x1="0" y1="76" x2="1200" y2="76"/>
-  <rect class="logoBox" x="130" y="24" width="30" height="30"/>
-  <path class="tick" d="M138 39 L145 46 L155 32"/>
-  <text class="brand" x="175" y="45">Local Web Fix</text>
+  <!-- Header -->
+  <rect class="logoBox" x="60" y="24" width="30" height="30"/>
+  <path class="tick" d="M66 39l7 7 12 -13"/>
+  <text class="brand" x="102" y="45">Local Web Fix</text>
+  <text class="nav" x="640" y="45">What I fix</text>
+  <text class="nav" x="742" y="45">Example</text>
+  <text class="nav" x="830" y="45">Prices</text>
+  <text class="nav" x="900" y="45">Process</text>
+  <text class="nav" x="984" y="45">Access</text>
+  <text class="nav" x="1062" y="45">Free check</text>
+  <line class="headerline" x1="0" y1="78" x2="1200" y2="78"/>
 
-  <text class="nav" x="520" y="44">What I fix</text>
-  <text class="nav" x="618" y="44">Example</text>
-  <text class="nav" x="700" y="44">Prices</text>
-  <text class="nav" x="770" y="44">Process</text>
-  <text class="nav" x="850" y="44">Access</text>
-  <text class="nav" x="928" y="44">Free check</text>
+  <!-- Hero copy -->
+  <text class="kicker" x="60" y="150">Small online tidy-ups for UK local businesses</text>
+  <text class="headline" x="56" y="230">Make the important</text>
+  <text class="headline" x="56" y="300">stuff easier to find.</text>
+  <text class="body" x="60" y="350">I check your website, Google listing or social pages for the basics</text>
+  <text class="body" x="60" y="380">customers rely on: hours, menus, prices, phone buttons and layout.</text>
 
-  <rect class="toggle" x="1030" y="17" width="74" height="42"/>
-  <text class="pillText" x="1067" y="44" text-anchor="middle">Dark</text>
+  <path class="tick" d="M62 412l6 6 10 -11"/>
+  <text class="tickText" x="90" y="424">Free public check first</text>
+  <path class="tick" d="M292 412l6 6 10 -11"/>
+  <text class="tickText" x="320" y="424">No login needed</text>
+  <path class="tick" d="M482 412l6 6 10 -11"/>
+  <text class="tickText" x="510" y="424">No sales or ranking promises</text>
 
-  <text class="kicker" x="130" y="175">SMALL ONLINE TIDY-UPS FOR UK LOCAL BUSINESSES</text>
+  <!-- Buttons -->
+  <rect class="primaryEdge" x="60" y="458" width="190" height="55"/>
+  <rect class="primary" x="60" y="455" width="190" height="52"/>
+  <text class="primaryText" x="155" y="487" text-anchor="middle">Start free check</text>
+  <rect class="secondary" x="270" y="455" width="150" height="52"/>
+  <text class="secondaryText" x="345" y="487" text-anchor="middle">See prices</text>
+  <text class="body" x="60" y="545">Run by Jamie Parr, a Computing Technologies student based in Belfast.</text>
 
-  <text class="headline" x="130" y="250">Make the</text>
-  <text class="headline" x="130" y="323">important stuff</text>
-  <text class="headline" x="130" y="396">easier to find.</text>
+  <!-- Hero card -->
+  <rect class="cardTop" x="760" y="140" width="380" height="4"/>
+  <rect class="card" x="760" y="144" width="380" height="330"/>
+  <text class="cardTitle" x="790" y="192">Quick check looks at</text>
+  <path class="tick" d="M792 216l6 6 10 -11"/>
+  <text class="cardText" x="820" y="228">Menus and services</text>
+  <path class="tick" d="M792 252l6 6 10 -11"/>
+  <text class="cardText" x="820" y="264">Opening hours</text>
+  <path class="tick" d="M792 288l6 6 10 -11"/>
+  <text class="cardText" x="820" y="300">Call buttons</text>
+  <path class="tick" d="M792 324l6 6 10 -11"/>
+  <text class="cardText" x="820" y="336">Booking and order links</text>
+  <path class="tick" d="M792 360l6 6 10 -11"/>
+  <text class="cardText" x="820" y="372">Google details</text>
+  <line class="rule" x1="790" y1="398" x2="1110" y2="398"/>
+  <text class="cardText" x="790" y="430">Best fit: cafés, takeaways, salons,</text>
+  <text class="cardText" x="790" y="456">trades, shops and local services.</text>
 
-  <text class="body" x="130" y="455">I check your website, Google listing or social pages for the basics customers</text>
-  <text class="body" x="130" y="487">rely on: hours, menus, services, prices, phone buttons, booking links and</text>
-  <text class="body" x="130" y="519">mobile layout.</text>
+  <!-- Lower section -->
+  <line class="rule" x1="0" y1="590" x2="1200" y2="590"/>
+  <rect class="cardTop" x="60" y="620" width="340" height="4"/>
+  <rect class="card" x="60" y="624" width="340" height="106"/>
+  <text class="cardTitle" x="84" y="660">People can’t find the basics</text>
+  <text class="cardText" x="84" y="690">Menus, hours or key details are</text>
+  <text class="cardText" x="84" y="714">hidden, outdated or hard to read.</text>
 
-  <rect class="pill" x="130" y="560" width="170" height="38"/>
-  <text class="pillText" x="215" y="584" text-anchor="middle">Free public check first</text>
+  <rect class="cardTop" x="430" y="620" width="340" height="4"/>
+  <rect class="card" x="430" y="624" width="340" height="106"/>
+  <text class="cardTitle" x="454" y="660">They can’t take the next step</text>
+  <text class="cardText" x="454" y="690">The call, book or order route is</text>
+  <text class="cardText" x="454" y="714">unclear, broken or awkward.</text>
 
-  <rect class="pill" x="313" y="560" width="140" height="38"/>
-  <text class="pillText" x="383" y="584" text-anchor="middle">No login needed</text>
-
-  <rect class="pill" x="468" y="560" width="205" height="38"/>
-  <text class="pillText" x="570" y="584" text-anchor="middle">No sales or ranking promises</text>
-
-  <rect class="primary" x="130" y="625" width="145" height="50"/>
-  <text class="primaryText" x="202" y="656" text-anchor="middle">Start free check</text>
-
-  <rect class="secondary" x="295" y="625" width="110" height="50"/>
-  <text class="secondaryText" x="350" y="656" text-anchor="middle">See prices</text>
-
-  <text class="body" x="130" y="717">Run by Jamie Parr, a Computing Technologies student based in Belfast.</text>
-
-  <rect class="card" x="745" y="175" width="340" height="250"/>
-  <text class="cardTitle" x="770" y="218">Quick check looks at</text>
-
-  <rect class="pill" x="770" y="245" width="125" height="36"/>
-  <text class="pillText" x="832" y="268" text-anchor="middle">Menus / services</text>
-
-  <rect class="pill" x="910" y="245" width="120" height="36"/>
-  <text class="pillText" x="970" y="268" text-anchor="middle">Opening hours</text>
-
-  <rect class="pill" x="770" y="295" width="160" height="36"/>
-  <text class="pillText" x="850" y="318" text-anchor="middle">Booking / order links</text>
-
-  <rect class="pill" x="945" y="295" width="115" height="36"/>
-  <text class="pillText" x="1002" y="318" text-anchor="middle">Google details</text>
-
-  <rect class="pill" x="770" y="345" width="115" height="36"/>
-  <text class="pillText" x="827" y="368" text-anchor="middle">Mobile clarity</text>
-
-  <line class="navline" x1="770" y1="397" x2="1060" y2="397"/>
-  <text class="cardText" x="770" y="433">Best fit: cafes, takeaways, salons, barbers, trades,</text>
-  <text class="cardText" x="770" y="462">shops, tutors, cleaners and simple local services.</text>
+  <rect class="cardTop" x="800" y="620" width="340" height="4"/>
+  <rect class="card" x="800" y="624" width="340" height="106"/>
+  <text class="cardTitle" x="824" y="660">Details don’t match</text>
+  <text class="cardText" x="824" y="690">Website, Google and socials tell</text>
+  <text class="cardText" x="824" y="714">different stories to customers.</text>
 </svg>
