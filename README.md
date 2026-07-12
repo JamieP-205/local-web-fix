@@ -14,11 +14,9 @@ The service is live at [localwebfix.co.uk](https://localwebfix.co.uk/). Enquirie
 
 Local Web Fix is a focused service website offering practical website and online-information improvements for UK local businesses. Many small businesses already have a site, Google profile, menu, booking link or social page but customers still struggle to find basic information. This site positions my service around those specific problems: opening hours, contact routes, mobile clarity, menus, prices, services and inconsistent public details. It avoids fake testimonials, ranking promises or agency-style marketing and instead explains my scope and process clearly.
 
-## Screenshots
+## Preview
 
-| Service website preview |
-| --- |
-| ![Local Web Fix preview](local-web-fix-preview.svg) |
+![The Local Web Fix homepage on desktop and mobile](assets/local-web-fix-preview.png)
 
 ## Why I built it
 
@@ -31,7 +29,7 @@ I wanted to help local businesses fix the most important issues on their existin
 - Clear pricing, scope, access-safety and privacy information on dedicated pages
 - An unlisted payment page used only after a job scope is agreed
 - A fictional example audit that is clearly labelled as an example
-- Operating templates for audits, proposals, handovers, releases and prospect tracking in `docs/`
+- Operating templates for audits, proposals, handovers and releases in `docs/`
 - A custom 404 page, sitemap, robots file, web manifest and social preview image
 
 ## Business thinking
@@ -84,6 +82,5 @@ By building Local Web Fix I learned how to scope and price a service, communicat
 
 - Collect anonymous feedback after each completed job to improve the service
 - Automate audit generation based on a checklist of common issues
-- Add a FAQ section addressing typical client questions about process and scope
 - Explore offering monthly monitoring as an optional add-on
 
