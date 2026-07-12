@@ -2,55 +2,36 @@
 
 [![CI](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml/badge.svg)](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml)
 
-## Live site
+Live at [localwebfix.co.uk](https://localwebfix.co.uk/).
 
-The service is live at [localwebfix.co.uk](https://localwebfix.co.uk/). Enquiries are delivered via Netlify Forms and followed up manually.
+A small service site. Local businesses send me a link to their website, Google listing or Facebook page, and I check whether a customer can actually find the basics: opening hours, the menu, a phone number that works on a phone, a booking link that is not dead.
 
-## Status
-
-**Live service website**  -  this project is in production and used to accept enquiries from real clients.
-
-## Summary
-
-Local Web Fix is a focused service website offering practical website and online-information improvements for UK local businesses. Many small businesses already have a site, Google profile, menu, booking link or social page but customers still struggle to find basic information. This site positions my service around those specific problems: opening hours, contact routes, mobile clarity, menus, prices, services and inconsistent public details. It avoids fake testimonials, ranking promises or agency-style marketing and instead explains my scope and process clearly.
-
-## Preview
-
-![The Local Web Fix homepage on desktop and mobile](assets/local-web-fix-preview.png)
+![The Local Web Fix homepage](assets/local-web-fix-preview.png)
 
 ## Why I built it
 
-I wanted to help local businesses fix the most important issues on their existing web presence without selling a full redesign they may not need. By offering targeted audits, clear handover templates and honest pricing, I can practise both technical and communication skills while studying.
+Most small businesses do not need a rebuild. They need the four things customers look for to be correct and findable. Nobody sells that, because it is not worth much money, so shops get quoted for a full site instead. This is my attempt at offering the small version honestly, while I am still a student and cheap.
 
-## What I built
+## The site is the easy part
 
-- A mobile-first service website with light and dark themes and a persistent theme preference
-- A Netlify Forms enquiry flow with required-field validation and a honeypot field to deter bots
-- Clear pricing, scope, access-safety and privacy information on dedicated pages
-- An unlisted payment page used only after a job scope is agreed
-- A fictional example audit that is clearly labelled as an example
-- Operating templates for audits, proposals, handovers and releases in `docs/`
-- A custom 404 page, sitemap, robots file, web manifest and social preview image
+It is HTML, CSS and a theme toggle. The work went into the wording:
 
-## Business thinking
+- **Pricing is on the page.** Free check, then £50, £100 or £150 with what each includes. No "contact us for a quote".
+- **The scope page says what I will not do.** No SEO campaigns, no payment systems, no plugin surgery. If someone else manages the site, I say so and hand over notes instead.
+- **No passwords, ever.** The first check uses public links only. If a fix needs access later, it goes through proper collaborator or manager permissions. I am a student, and I should not be holding the logins to somebody's livelihood.
+- **The example check is labelled fictional**, because it is. It stays that way until a real business is happy for me to publish theirs.
 
-This project forced me to think beyond code. I wrote copy that sets client expectations, created a pricing model that reflects the value of small fixes, established a safe process for accessing client sites without requesting passwords and built templates for audits and proposals. I also learned to keep the service honest: by making it clear I am a student and that I do not guarantee search-engine rankings or oversell my capacity, I build trust instead of hype.
+## Files
 
-## Key files
+- `index.html` the whole pitch, and the enquiry form
+- `scope.html` what is and is not included
+- `privacy.html` what happens to what people send me
+- `pay.html` payment links, unlisted and `noindex`, only sent once a scope is agreed
+- `theme.js` light/dark toggle, saved in localStorage
+- `docs/` templates I use for the actual work: audits, proposals, handovers
+- `tools/check-site.js` the checks CI runs
 
-- `index.html`  -  homepage and enquiry form
-- `privacy.html`  -  privacy information
-- `scope.html`  -  service boundaries and terms
-- `pay.html`  -  unlisted scope-confirmed payment links
-- `theme.js`  -  persisted light/dark theme preference
-- `docs/`  -  reusable operating templates and release notes
-- `tools/check-site.js`  -  site and link validation script used in CI
-
-## Technical approach
-
-The project uses semantic HTML, CSS and a small vanilla JavaScript theme controller. There is no client-side framework because the site does not need one. The enquiry form is handled by Netlify Forms, which stores submissions and sends email notifications. The form never asks for passwords or account credentials. If later work needs access, the process uses limited collaborator or manager permissions where the platform supports them.
-
-## Local development
+## Running it
 
 ```bash
 npm install
@@ -58,29 +39,15 @@ npm test
 npx serve .
 ```
 
-No build step is required. `npm test` checks JavaScript syntax, required files, metadata, local links and the Netlify form configuration.
+No build step. `npm test` parses the JavaScript, then checks the required pages exist, the local links resolve with the right casing, and the enquiry form still has the Netlify attributes on it. That last check exists because the form is the only thing on the site that matters, and it is one attribute away from silently not submitting.
 
-## Deployment checks
+## Gotchas
 
-After a Netlify deployment I:
+- The form is Netlify Forms, so it only works on a Netlify deploy. It does nothing on `npx serve`.
+- Reaching the thanks page does not prove an email went out. Netlify stores the submission either way. Email notifications are configured separately in the Netlify dashboard, which I found out the annoying way.
+- `pay.html` is deliberately not in the navigation or the sitemap. Do not link it.
 
-1. Submit a test enquiry
-2. Confirm it appears in Netlify Forms
-3. Verify the email notification
-4. Check the main information pages and a missing URL
-5. Confirm the payment page remains outside public navigation
+## Next
 
-## Privacy & safety notes
-
-The service never stores or asks for passwords. All `.env` files and secrets are excluded from the repository. See [SECURITY.md](SECURITY.md) for vulnerability reporting and [CONTRIBUTING.md](CONTRIBUTING.md) for project rules.
-
-## What I learned
-
-By building Local Web Fix I learned how to scope and price a service, communicate limitations transparently, and design a simple website that gets clients to the enquiry stage without friction. I also gained practice in writing privacy policies, managing Netlify Forms, and thinking through client handover and access safety.
-
-## Future improvements
-
-- Collect anonymous feedback after each completed job to improve the service
-- Automate audit generation based on a checklist of common issues
-- Explore offering monthly monitoring as an optional add-on
-
+- A real example report, once a client is happy for me to publish one
+- Feedback after a finished job, so I have something better than my own opinion of how it went
