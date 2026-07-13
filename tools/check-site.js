@@ -59,8 +59,20 @@ for (const required of ["index.html", "404.html", "privacy.html", "scope.html", 
 }
 
 const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
-if (!/name=["']quick-review["']/i.test(homepage) || !/data-netlify=["']true["']/i.test(homepage)) {
-  errors.push("index.html must contain the Netlify quick-review form");
+const quickReviewForm = homepage.match(/<form\b(?=[^>]*\bname=["']quick-review["'])(?=[^>]*\bmethod=["']POST["'])(?=[^>]*\baction=["']\/thanks\.html["'])(?=[^>]*\bdata-netlify=["']true["'])(?=[^>]*\bnetlify-honeypot=["']bot-field["'])[^>]*>([\s\S]*?)<\/form>/i);
+if (!quickReviewForm) {
+  errors.push("index.html must contain the complete Netlify quick-review form setup");
+} else {
+  const formBody = quickReviewForm[1];
+  if (!/<input\b(?=[^>]*\btype=["']hidden["'])(?=[^>]*\bname=["']form-name["'])(?=[^>]*\bvalue=["']quick-review["'])[^>]*>/i.test(formBody)) {
+    errors.push("quick-review must include its hidden form-name field");
+  }
+  if (!/<input\b(?=[^>]*\bname=["']bot-field["'])[^>]*>/i.test(formBody)) {
+    errors.push("quick-review must include its honeypot input");
+  }
+  if (!/<input\b(?=[^>]*\btype=["']hidden["'])(?=[^>]*\bname=["']subject["'])(?=[^>]*\bdata-remove-prefix\b)[^>]*>/i.test(formBody)) {
+    errors.push("quick-review must keep the version-controlled notification subject");
+  }
 }
 
 if (errors.length) {
