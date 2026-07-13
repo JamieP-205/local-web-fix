@@ -91,6 +91,8 @@ svg {
   max-width: 100%;
 }
 
+img { height: auto; }
+
 p {
   margin: 0;
   max-width: 66ch;
@@ -182,10 +184,6 @@ ul {
 
 .section-lg {
   padding: clamp(2.8rem, 7vw, 5rem) 0;
-}
-
-.section-muted {
-  background: var(--bg-alt);
 }
 
 .section-head {
@@ -782,10 +780,6 @@ details p {
 
 /* 10. Contact form */
 
-.form-section {
-  background: var(--bg-alt);
-}
-
 .form-layout {
   display: grid;
   gap: 1.3rem;
@@ -972,7 +966,6 @@ details p {
 
 .compact-info-strip {
   padding: 1rem 0;
-  background: var(--bg-alt);
 }
 
 .strip-grid {

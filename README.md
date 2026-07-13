@@ -10,14 +10,14 @@ A small service site. Local businesses send me a link to their website, Google l
 
 ## Why I built it
 
-Most small businesses do not need a rebuild. They need the four things customers look for to be correct and findable. Nobody sells that, because it is not worth much money, so shops get quoted for a full site instead. This is my attempt at offering the small version honestly, while I am still a student and cheap.
+Most small businesses do not need a rebuild. They need the details customers rely on to be correct and easy to find. This is my attempt to offer that smaller practical service while I build experience alongside university.
 
-## The site is the easy part
+## The code is deliberately simple
 
 It is HTML, CSS and a theme toggle. The work went into the wording:
 
 - **Pricing is on the page.** Free check, then £50, £100 or £150 with what each includes. No "contact us for a quote".
-- **The scope page says what I will not do.** No SEO campaigns, no payment systems, no plugin surgery. If someone else manages the site, I say so and hand over notes instead.
+- **The scope page says what I will not do.** No SEO campaigns, no payment systems, no plugin surgery. If another provider manages the site, I hand over notes rather than trying to take over.
 - **No passwords, ever.** The first check uses public links only. If a fix needs access later, it goes through proper collaborator or manager permissions. I am a student, and I should not be holding the logins to somebody's livelihood.
 - **The example check is labelled fictional**, because it is. It stays that way until a real business is happy for me to publish theirs.
 
@@ -39,12 +39,12 @@ npm test
 npx serve .
 ```
 
-No build step. `npm test` parses the JavaScript, then checks the required pages exist, the local links resolve with the right casing, and the enquiry form still has the Netlify attributes on it. That last check exists because the form is the only thing on the site that matters, and it is one attribute away from silently not submitting.
+No build step. `npm test` parses the JavaScript, checks that required pages exist, verifies local links with exact filename casing and validates the full Netlify form setup. The form is the main conversion point, and a missing attribute can stop submissions without breaking the rest of the page.
 
 ## Gotchas
 
 - The form is Netlify Forms, so it only works on a Netlify deploy. It does nothing on `npx serve`.
-- Reaching the thanks page does not prove an email went out. Netlify stores the submission either way. Email notifications are configured separately in the Netlify dashboard, which I found out the annoying way.
+- Reaching the thanks page does not prove an email went out. Netlify stores the submission either way, while email notifications are configured separately in the Netlify dashboard.
 - `pay.html` is deliberately not in the navigation or the sitemap. Do not link it.
 
 ## Next
