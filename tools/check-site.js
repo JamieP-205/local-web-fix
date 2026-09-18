@@ -27,6 +27,7 @@ function exactPathExists(target) {
 }
 
 const files = walk(root);
+
 for (const file of files.filter((item) => item.endsWith(".json"))) {
   try {
     JSON.parse(fs.readFileSync(file, "utf8"));
@@ -53,30 +54,31 @@ for (const file of files.filter((item) => /\.html?$/i.test(item))) {
   }
 }
 
-for (const required of ["index.html", "404.html", "privacy.html", "scope.html", "thanks.html", "pay.html", "robots.txt", "sitemap.xml", "site.webmanifest", "netlify.toml"]) {
+for (const required of ["index.html", "404.html", "scope.html", "robots.txt", "sitemap.xml", "site.webmanifest", "netlify.toml"]) {
   const file = path.join(root, required);
   if (!fs.existsSync(file) || fs.statSync(file).size === 0) errors.push(`${required} is missing or empty`);
 }
 
 const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
-const quickReviewForm = homepage.match(/<form\b(?=[^>]*\bname=["']quick-review["'])(?=[^>]*\bmethod=["']POST["'])(?=[^>]*\baction=["']\/thanks\.html["'])(?=[^>]*\bdata-netlify=["']true["'])(?=[^>]*\bnetlify-honeypot=["']bot-field["'])[^>]*>([\s\S]*?)<\/form>/i);
-if (!quickReviewForm) {
-  errors.push("index.html must contain the complete Netlify quick-review form setup");
-} else {
-  const formBody = quickReviewForm[1];
-  if (!/<input\b(?=[^>]*\btype=["']hidden["'])(?=[^>]*\bname=["']form-name["'])(?=[^>]*\bvalue=["']quick-review["'])[^>]*>/i.test(formBody)) {
-    errors.push("quick-review must include its hidden form-name field");
-  }
-  if (!/<input\b(?=[^>]*\bname=["']bot-field["'])[^>]*>/i.test(formBody)) {
-    errors.push("quick-review must include its honeypot input");
-  }
-  if (!/<input\b(?=[^>]*\btype=["']hidden["'])(?=[^>]*\bname=["']subject["'])(?=[^>]*\bdata-remove-prefix\b)[^>]*>/i.test(formBody)) {
-    errors.push("quick-review must keep the version-controlled notification subject");
-  }
+if (!/Portfolio concept/i.test(homepage)) {
+  errors.push("index.html must clearly identify Local Web Fix as a portfolio concept");
+}
+if (!/name=["']quick-review-demo["']/i.test(homepage) || !/aria-disabled=["']true["']/i.test(homepage) || !/\binert\b/i.test(homepage)) {
+  errors.push("index.html must keep the example enquiry form visibly disabled");
+}
+
+const publicText = files
+  .filter((file) => /\.(?:html?|md|js|json)$/i.test(file))
+  .map((file) => fs.readFileSync(file, "utf8"))
+  .join("\n");
+
+if (/https:\/\/buy\.stripe\.com/i.test(publicText)) {
+  errors.push("live Stripe payment links must not be present in the portfolio concept");
 }
 
 if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));
   process.exit(1);
 }
+
 console.log("Local Web Fix site validation passed.");
