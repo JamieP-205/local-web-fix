@@ -1,0 +1,35 @@
+/* Small additions for the portfolio-concept framing. */
+.concept-banner {
+  border-bottom: 1px solid var(--border, #d9ddd9);
+  background: color-mix(in srgb, var(--surface, #ffffff) 94%, #6f7c69);
+}
+
+.concept-banner .container {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.concept-banner p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.concept-banner strong { font-weight: 750; }
+
+.demo-only-note {
+  margin-top: .75rem;
+  font-size: .9rem;
+  opacity: .78;
+}
+
+.contact-form.is-demo {
+  opacity: .72;
+}
+
+.contact-form.is-demo input,
+.contact-form.is-demo textarea,
+.contact-form.is-demo select,
+.contact-form.is-demo button {
+  cursor: not-allowed;
+}

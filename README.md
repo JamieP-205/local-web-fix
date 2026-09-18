@@ -2,32 +2,37 @@
 
 [![CI](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml/badge.svg)](https://github.com/JamieP-205/local-web-fix/actions/workflows/ci.yml)
 
-Live at [localwebfix.co.uk](https://localwebfix.co.uk/).
+Published at [localwebfix.co.uk](https://localwebfix.co.uk/).
 
-A small service site. Local businesses send me a link to their website, Google listing or Facebook page, and I check whether a customer can actually find the basics: opening hours, the menu, a phone number that works on a phone, a booking link that is not dead.
+Local Web Fix is a **portfolio business concept**, not an active service I am currently operating. I built it to practise turning a small local-business web-service idea into a believable public website with clear scope, example pricing, an enquiry flow, safe-access guidance and a mobile-first layout.
 
-## Why I built it
+## The idea
 
-Most small businesses do not need a rebuild. They need the details customers rely on to be correct and easy to find. This is my attempt to offer that smaller practical service while I build experience alongside university.
+The mock service is based on ordinary problems that can make a small business harder to use online: inconsistent opening hours, buried menus, broken contact links, old booking pages or awkward mobile layouts.
+
+The site explores how I would explain a deliberately narrow offer without pretending every problem needs a rebuild.
+
+## What I focused on
+
+- **Clear scope.** The site says what the example service would and would not cover.
+- **Example pricing.** The £50, £100 and £150 packages are part of the concept rather than evidence of completed client work.
+- **Safe access.** The copy tells users not to send passwords and models limited collaborator/manager access instead.
+- **A realistic enquiry journey.** The form remains visible as a design example but is disabled on the published site because I am not currently taking work through it.
+- **Honest evidence.** The example check is fictional and labelled as such.
 
 ## The code is deliberately simple
 
-It is HTML, CSS and a theme toggle. The work went into the wording:
+It is mainly HTML and CSS with a small JavaScript theme toggle and concept-state handling. There is no framework or unnecessary backend.
 
-- **Pricing is on the page.** Free check, then £50, £100 or £150 with what each includes. No "contact us for a quote".
-- **The scope page says what I will not do.** No SEO campaigns, no payment systems, no plugin surgery. If another provider manages the site, I hand over notes rather than trying to take over.
-- **No passwords, ever.** The first check uses public links only. If a fix needs access later, it goes through proper collaborator or manager permissions. I am a student, and I should not be holding the logins to somebody's livelihood.
-- **The example check is labelled fictional**, because it is. It stays that way until a real business is happy for me to publish theirs.
+Main files:
 
-## Files
-
-- `index.html` the whole pitch, and the enquiry form
-- `scope.html` what is and is not included
-- `privacy.html` what happens to what people send me
-- `pay.html` payment links, unlisted and `noindex`, only sent once a scope is agreed
-- `theme.js` light/dark toggle, saved in localStorage
-- `docs/` templates I use for the actual work: audits, proposals, handovers
-- `tools/check-site.js` the checks CI runs
+- `index.html` - the business-site concept and example enquiry flow
+- `scope.html` - example scope and terms
+- `privacy.html` - example privacy information
+- `pay.html` - unlisted/noindex payment-flow page retained as part of the concept
+- `theme.js` - light/dark theme plus the published concept framing
+- `concept-note.css` - small styles for the concept notice
+- `tools/check-site.js` - CI checks for pages, links and site structure
 
 ## Running it
 
@@ -37,15 +42,8 @@ npm test
 npx serve .
 ```
 
-No build step. `npm test` parses the JavaScript, checks that required pages exist, verifies local links with exact filename casing and validates the full Netlify form setup. The form is the main conversion point, and a missing attribute can stop submissions without breaking the rest of the page.
+There is no build step. The automated checks parse the JavaScript, verify required pages and local links, and validate the static site structure.
 
-## Gotchas
+## If I take it further
 
-- The form is Netlify Forms, so it only works on a Netlify deploy. It does nothing on `npx serve`.
-- Reaching the thanks page does not prove an email went out. Netlify stores the submission either way, while email notifications are configured separately in the Netlify dashboard.
-- `pay.html` is deliberately not in the navigation or the sitemap. Do not link it.
-
-## Next
-
-- A real example report, once a client is happy for me to publish one
-- Feedback after a finished job, so I have something better than my own opinion of how it went
+The useful next step would be testing the wording and flow with a few real small-business owners. That would give me evidence about what is clear or confusing without pretending the concept already has clients or results.
