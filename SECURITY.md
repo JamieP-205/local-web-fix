@@ -1,5 +1,5 @@
 # Security Policy
 
-Report vulnerabilities privately to `hello@localwebfix.co.uk`. Do not open a public issue for exposed enquiries, form abuse, payment-link problems, access-control mistakes, or hosting configuration weaknesses.
+If you find a security issue in the published site or repository, report it privately to `hello@localwebfix.co.uk` rather than posting credentials or sensitive details in a public issue.
 
-Never include passwords, client records, payment details, session data, or other sensitive information in a report. Only the current `main` branch is supported.
+The site is a portfolio concept and does not accept live enquiries or payments. Only the current `main` branch is supported.
