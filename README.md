@@ -6,8 +6,6 @@ Live at [localwebfix.co.uk](https://localwebfix.co.uk/).
 
 A small service site. Local businesses send me a link to their website, Google listing or Facebook page, and I check whether a customer can actually find the basics: opening hours, the menu, a phone number that works on a phone, a booking link that is not dead.
 
-![The Local Web Fix homepage](assets/local-web-fix-preview.png)
-
 ## Why I built it
 
 Most small businesses do not need a rebuild. They need the details customers rely on to be correct and easy to find. This is my attempt to offer that smaller practical service while I build experience alongside university.
