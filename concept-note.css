@@ -1,7 +1,8 @@
 /* Small additions for the portfolio-concept framing. */
 .concept-banner {
-  border-bottom: 1px solid var(--border, #d9ddd9);
-  background: color-mix(in srgb, var(--surface, #ffffff) 94%, #6f7c69);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-alt) 92%, var(--green) 8%);
+  color: var(--ink);
 }
 
 .concept-banner .container {
@@ -13,9 +14,13 @@
   margin: 0;
   font-size: .9rem;
   line-height: 1.5;
+  color: inherit;
 }
 
-.concept-banner strong { font-weight: 750; }
+.concept-banner strong {
+  color: inherit;
+  font-weight: 750;
+}
 
 .demo-only-note {
   margin-top: .75rem;
