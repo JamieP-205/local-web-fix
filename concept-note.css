@@ -21,20 +21,3 @@
   color: inherit;
   font-weight: 750;
 }
-
-.demo-only-note {
-  margin-top: .75rem;
-  font-size: .9rem;
-  opacity: .78;
-}
-
-.contact-form.is-demo {
-  opacity: .72;
-}
-
-.contact-form.is-demo input,
-.contact-form.is-demo textarea,
-.contact-form.is-demo select,
-.contact-form.is-demo button {
-  cursor: not-allowed;
-}
