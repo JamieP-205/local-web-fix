@@ -29,7 +29,7 @@ Main files:
 - `index.html` - the main concept site and disabled example form
 - `scope.html` - an example of how the service scope could be explained
 - `theme.js` - light/dark theme handling
-- `concept-note.css` - styles for the visible portfolio-concept notice
+- `styles.css` - all the styles, including the portfolio-concept banner
 - `tools/check-site.js` - basic structure and local-link checks
 
 ## Running it
