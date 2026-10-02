@@ -54,22 +54,22 @@
       <a href="#access">Access</a>
       <a href="#quick-review">Demo form</a>
     </nav>
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" aria-pressed="false"><span data-theme-label>Dark</span></button>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark theme</button>
   </div>
 </header>
 
-<div class="concept-banner" role="note">
-  <div class="container"><p><strong>Portfolio concept.</strong> I built Local Web Fix as a realistic business-website project. It is not an active service and I am not taking enquiries through it.</p></div>
-</div>
-
 <main id="main">
+  <div class="concept-banner" role="note">
+    <div class="container"><p><strong>Portfolio concept.</strong> I built Local Web Fix as a realistic business-website project. It is not an active service and I am not taking enquiries through it.</p></div>
+  </div>
+
   <section class="hero section-lg">
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Portfolio concept for a local-business web service</p>
         <h1>Make the important stuff easier to find.</h1>
         <p class="hero-lede">This project explores how a small web service could explain its scope, pricing, customer journey and safe-access rules clearly to local businesses.</p>
-        <div class="trust-row" aria-label="Project summary">
+        <div class="trust-row">
           <span>Portfolio concept</span>
           <span>Published demo</span>
           <span>Not accepting work</span>
@@ -290,16 +290,19 @@
         <p>The form stays visible as part of the project, but the controls are disabled because Local Web Fix is not currently taking work.</p>
         <p class="micro-note">The example keeps the required fields short and avoids asking for passwords or private account information.</p>
       </div>
-      <form name="quick-review-demo" class="contact-form is-demo" aria-disabled="true" inert>
-        <div class="field-grid">
-          <div class="field"><label for="business-name">Business name</label><input id="business-name" type="text" disabled></div>
-          <div class="field"><label for="name">Your name</label><input id="name" type="text" disabled></div>
-        </div>
-        <div class="field"><label for="email">Best email</label><input id="email" type="email" disabled></div>
-        <div class="field"><label for="links">Website, Google, social, menu or booking link</label><textarea id="links" rows="4" disabled placeholder="Example public links"></textarea></div>
-        <div class="field"><label for="issue">What feels wrong, unclear or outdated?</label><textarea id="issue" rows="4" disabled placeholder="Example: old hours, broken link or awkward mobile contact route"></textarea></div>
-        <button type="button" class="btn btn-primary" disabled>Demo only - not accepting enquiries</button>
-        <p class="form-note demo-only-note">These fields are intentionally disabled. They show the proposed customer journey without collecting real enquiries.</p>
+      <form name="quick-review-demo" class="contact-form">
+        <fieldset disabled>
+          <legend>Example enquiry form (disabled)</legend>
+          <div class="field-grid">
+            <div class="field"><label for="business-name">Business name</label><input id="business-name" type="text"></div>
+            <div class="field"><label for="name">Your name</label><input id="name" type="text"></div>
+          </div>
+          <div class="field"><label for="email">Best email</label><input id="email" type="email"></div>
+          <div class="field"><label for="links">Website, Google, social, menu or booking link</label><textarea id="links" rows="4" placeholder="Example public links"></textarea></div>
+          <div class="field"><label for="issue">What feels wrong, unclear or outdated?</label><textarea id="issue" rows="4" placeholder="Example: old hours, broken link or awkward mobile contact route"></textarea></div>
+          <button type="button" class="btn btn-primary">Demo only, not accepting enquiries</button>
+        </fieldset>
+        <p class="form-note">These fields are intentionally disabled. They show the proposed customer journey without collecting real enquiries.</p>
       </form>
     </div>
   </section>

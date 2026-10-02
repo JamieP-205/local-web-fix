@@ -63,8 +63,9 @@ const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!/Portfolio concept/i.test(homepage)) {
   errors.push("index.html must clearly identify Local Web Fix as a portfolio concept");
 }
-if (!/name=["']quick-review-demo["']/i.test(homepage) || !/aria-disabled=["']true["']/i.test(homepage) || !/\binert\b/i.test(homepage)) {
-  errors.push("index.html must keep the example enquiry form visibly disabled");
+const demoForm = homepage.match(/<form\b[^>]*name=["']quick-review-demo["'][^>]*>([\s\S]*?)<\/form>/i);
+if (!demoForm || !/<fieldset\s+disabled\b/i.test(demoForm[1])) {
+  errors.push("index.html must keep the example enquiry form inside <fieldset disabled>");
 }
 
 const publicText = files
