@@ -28,7 +28,7 @@ The styling borrows from the GOV.UK Design System because I wanted it to feel pl
 
 It is deliberately small: static HTML and CSS with a short JavaScript theme toggle. There is no framework, no backend and no payment flow.
 
-I used AI coding tools for a lot of the code and copy here, working from my own idea and decisions about what the service would and wouldn't offer.
+I use AI tools as part of my development workflow for research, implementation support and code review. Some changes here were made by AI coding agents, including the October 2026 accessibility fixes, and the commit authors show which.
 
 Main files:
 
