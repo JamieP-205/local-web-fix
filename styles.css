@@ -32,6 +32,7 @@
   --line-strong: #0b0c0c;
   --green: #00593b;
   --green-dark: #002d1e;
+  --button-bg: #00593b; /* white text on this is 8.4:1 */
   --green-tint: #eaf1ed;
   --focus: #ffdd00;
   --warn: #942514;
@@ -48,7 +49,8 @@
   --line: #434a45;
   --line-strong: #eceeeb;
   --green: #2e9268;
-  --green-dark: #1d6f4d;
+  --green-dark: #0f4a33;
+  --button-bg: #1d6f4d; /* 6.1:1 with white; --green is too light for button text */
   --green-tint: #1b2a22;
   --warn: #e6837a;
 }
@@ -355,7 +357,7 @@ ul {
 }
 
 .btn-primary {
-  background: var(--green);
+  background: var(--button-bg);
   color: #ffffff;
   box-shadow: 0 3px 0 var(--green-dark);
 }
@@ -640,7 +642,7 @@ ul {
   margin: 0;
 }
 
-.price-card > p:not(.price) {
+.price-card > p:not(.price):not(.badge) {
   color: var(--muted);
 }
 
@@ -663,7 +665,7 @@ ul {
 
 .badge {
   justify-self: start;
-  background: var(--green);
+  background: var(--button-bg);
   color: #ffffff;
   padding: 0.25rem 0.55rem;
   font-weight: 700;
