@@ -4,33 +4,39 @@
 
 Published at [localwebfix.co.uk](https://localwebfix.co.uk/).
 
-Local Web Fix is a **portfolio business concept**, not an active service. I built it to practise turning a small local-business web-service idea into a complete public website with clear scope, example pricing, a simple enquiry journey and safe-access guidance.
+Local Web Fix is a portfolio concept for a small website-fix service. It is not an active business.
+
+I first put this up in June 2026 as a small side service for local businesses, with a working enquiry form and Stripe payment links. Nobody enquired or paid, and in September 2026 I stopped offering it and turned the site into a portfolio concept. The form is now disabled and the prices are examples.
 
 ## The idea
 
-The mock service focuses on ordinary problems that can make a small business harder to use online: inconsistent opening hours, buried menus, broken contact links, old booking pages and awkward mobile layouts.
+The service was aimed at ordinary problems that make a small business harder to use online: inconsistent opening hours, buried menus, broken contact links, old booking pages and awkward mobile layouts.
 
-I wanted the site to make the limits of the idea as clear as the offer itself. It avoids promises about rankings or sales and keeps larger work such as full rebuilds, e-commerce and complex booking systems outside the example scope.
+I wanted the site to make the limits of the idea as clear as the offer itself. It avoids promises about rankings or sales and keeps larger work such as full rebuilds, e-commerce and complex booking systems outside the scope.
 
-## What I focused on
+What I focused on:
 
-- **Clear scope** - what the example service would and would not cover.
-- **Example pricing** - visible packages used to practise explaining limits before somebody reaches a form.
-- **Safe access** - public links first, then limited platform permissions if a hypothetical fix needed access.
-- **Customer journey** - a short path from the problem to an agreed small change.
-- **Honest evidence** - the example business check is fictional and the enquiry form is visibly disabled.
+- Writing down what the service would and wouldn't cover.
+- Showing prices on the page, so the limits are clear before anyone reaches a form.
+- Starting from public links. If a fix ever needed account access, it would use limited platform roles rather than shared passwords.
+- A short route from spotting a problem to agreeing one small change.
+- Being clear about what isn't real: the example business check is made up and the enquiry form is visibly disabled.
 
-## Implementation
+The styling borrows from the GOV.UK Design System because I wanted it to feel plain and easy to trust. It isn't affiliated with GOV.UK.
 
-The project is deliberately small: static HTML and CSS with a short JavaScript theme toggle. There is no application framework or live payment flow.
+## How it's built
+
+It is deliberately small: static HTML and CSS with a short JavaScript theme toggle. There is no framework, no backend and no payment flow.
+
+I used AI coding tools for a lot of the code and copy here, working from my own idea and decisions about what the service would and wouldn't offer.
 
 Main files:
 
-- `index.html` - the main concept site and disabled example form
-- `scope.html` - an example of how the service scope could be explained
-- `theme.js` - light/dark theme handling
+- `index.html` - the homepage and the disabled example form
+- `scope.html` - how the service scope could be explained
 - `styles.css` - all the styles, including the portfolio-concept banner
-- `tools/check-site.js` - basic structure and local-link checks
+- `theme.js` - light/dark theme toggle
+- `tools/check-site.js` - structure, link and concept checks
 
 ## Running it
 
@@ -40,7 +46,7 @@ npm test
 npx serve .
 ```
 
-There is no build step. The checks validate the JavaScript, JSON, required pages and local links.
+There is no build step. `npm test` checks the JavaScript syntax, the JSON files, the required pages and local links. It also fails if the concept banner goes missing, if the demo form is no longer disabled, or if anything that could take real enquiries or payments comes back (Netlify Forms attributes, a form that posts, a Stripe link).
 
 ## If I take it further
 
