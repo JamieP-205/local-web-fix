@@ -735,25 +735,6 @@ ul {
   margin-bottom: 0.7rem;
 }
 
-.about-grid {
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.portrait-card {
-  border: 1px solid var(--line);
-  padding: 0.5rem;
-  width: min(16rem, 64vw);
-  margin-inline: auto;
-}
-
-.portrait-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
 .link-row {
   display: flex;
   flex-wrap: wrap;
@@ -792,10 +773,6 @@ details p {
 }
 
 @media (min-width: 720px) {
-  .about-grid {
-    grid-template-columns: 16rem minmax(0, 1fr);
-  }
-
   .faq-layout {
     grid-template-columns: minmax(220px, 0.5fr) minmax(0, 1fr);
   }
@@ -1134,7 +1111,6 @@ details p {
 
 @media (max-width: 560px) {
   .hero-actions .btn,
-  .price-card .btn,
   .page-actions .btn,
   .cta-card .btn {
     width: 100%;
