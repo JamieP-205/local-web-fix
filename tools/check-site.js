@@ -41,6 +41,14 @@ for (const file of files.filter((item) => /\.html?$/i.test(item))) {
   if (!/<title>.+<\/title>/is.test(source)) errors.push(`${path.relative(root, file)} is missing a title`);
   if (!/<meta\s+name=["']description["']/i.test(source)) errors.push(`${path.relative(root, file)} is missing a description`);
 
+  // The site is a concept, so nothing should be able to collect real enquiries.
+  if (/data-netlify|netlify-honeypot/i.test(source)) {
+    errors.push(`${path.relative(root, file)} contains Netlify Forms attributes`);
+  }
+  if (/\bmethod\s*=\s*["']?post\b/i.test(source)) {
+    errors.push(`${path.relative(root, file)} contains a form that posts data`);
+  }
+
   for (const match of source.matchAll(/(?:href|src)=["']([^"'#?]+)["']/gi)) {
     const reference = match[1];
     if (/^(?:[a-z]+:|\/\/)/i.test(reference)) continue;
@@ -63,9 +71,22 @@ const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!/Portfolio concept/i.test(homepage)) {
   errors.push("index.html must clearly identify Local Web Fix as a portfolio concept");
 }
-const demoForm = homepage.match(/<form\b[^>]*name=["']quick-review-demo["'][^>]*>([\s\S]*?)<\/form>/i);
-if (!demoForm || !/<fieldset\s+disabled\b/i.test(demoForm[1])) {
+const demoForm = homepage.match(/<form\b([^>]*name=["']quick-review-demo["'][^>]*)>([\s\S]*?)<\/form>/i);
+if (!demoForm || !/<fieldset\s+disabled\b/i.test(demoForm[2])) {
   errors.push("index.html must keep the example enquiry form inside <fieldset disabled>");
+}
+if (demoForm && /\b(?:action|method)\s*=/i.test(demoForm[1])) {
+  errors.push("the example enquiry form must not have an action or method");
+}
+
+// The banner should be the first thing inside <main> so the skip link lands on it.
+for (const page of ["index.html", "scope.html"]) {
+  const source = fs.readFileSync(path.join(root, page), "utf8");
+  if (!/class=["']concept-banner["']/i.test(source)) {
+    errors.push(`${page} must show the portfolio-concept banner`);
+  } else if (!/<main\b[^>]*>\s*<div class=["']concept-banner["']/i.test(source)) {
+    errors.push(`${page} must have the concept banner as the first thing inside <main>`);
+  }
 }
 
 const publicText = files
